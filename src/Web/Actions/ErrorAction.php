@@ -2,6 +2,7 @@
 
 namespace ZnYii\Error\Web\Actions;
 
+use ZnCore\Domain\Helpers\EntityHelper;
 use ZnYii\Error\Domain\Helpers\MessageHelper;
 
 class ErrorAction extends \yii\web\ErrorAction
@@ -9,6 +10,7 @@ class ErrorAction extends \yii\web\ErrorAction
 	
 	protected function getViewRenderParams()
 	{
-		return MessageHelper::get($this->exception);
+	    $errorEntity = MessageHelper::get($this->exception);
+		return EntityHelper::toArray($errorEntity);
 	}
 }

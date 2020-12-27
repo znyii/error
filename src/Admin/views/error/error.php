@@ -11,11 +11,7 @@ $this->title = $name;
 
 <div class="error">
 
-	<h1>
-		<?= $name ?>
-	</h1>
-
-    <?= $this->renderPhpFile(__DIR__ . '/../../../Web/views/_content.php', [
+	<?= $this->renderPhpFile(__DIR__ . '/../../../Web/views/_content.php', [
         'exception' => $exception,
         'name' => $name,
         'message' => $message,

@@ -1,6 +1,6 @@
 <?php
 
-namespace ZnYii\Error\Web\controllers;
+namespace ZnYii\Error\Admin\controllers;
 
 use yii\web\Controller;
 use ZnYii\Error\Web\Actions\ErrorAction;
