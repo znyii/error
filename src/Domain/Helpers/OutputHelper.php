@@ -2,9 +2,12 @@
 
 namespace ZnYii\Error\Domain\Helpers;
 
+use ZnCore\Base\Exceptions\DeprecatedException;
+
 class OutputHelper {
 	
 	public static function criticalError($message, $type = 'warning') {
+	    throw new DeprecatedException();
 		if(in_array(APP, [CONSOLE, API])) {
 			echo strip_tags($message);
 		} else {
